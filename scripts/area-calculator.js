@@ -20,3 +20,24 @@ function calculateTrigleArea(){
 
 }
 
+function calculateTrigleArea(){
+    // get rectangle width
+    const widthField = document.getElementById('rectangle-wight');
+    const wightValueText = widthField.value;
+    const wight = parseFloat(wightValueText);
+    console.log(wight);
+    
+    // get rectangle length
+    const lengthField = document.getElementById('rectangle-length');
+    const lengthValueText = lengthField.value;
+    const length = parseFloat(lengthValueText);
+    console.log(length);
+
+    // calculate area
+    const area = wight * length;
+
+    // show rectangle area 
+    const rectangleAreaSpan = document.getElementById('rectangle-area');
+    rectangleAreaSpan.innerText = area;
+
+}

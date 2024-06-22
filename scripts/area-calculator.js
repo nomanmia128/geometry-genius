@@ -11,6 +11,12 @@ function calculateTrigleArea(){
     const height = parseFloat(heightValueText);
     // console.log(height);
 
+    // validate input: width and length
+    if(isNaN(base) || isNaN(height)){
+        alert('please insert a number');
+        return;
+    }
+
     const area = 0.5 * base * height;
     // console.log(area)
 
@@ -20,7 +26,7 @@ function calculateTrigleArea(){
 
 }
 
-function calculateTrigleArea(){
+function calculateRectangleArea(){
     // get rectangle width
     const widthField = document.getElementById('rectangle-wight');
     const wightValueText = widthField.value;
@@ -32,6 +38,12 @@ function calculateTrigleArea(){
     const lengthValueText = lengthField.value;
     const length = parseFloat(lengthValueText);
     console.log(length);
+
+    // validate input: width and length
+    if(isNaN(wight) || isNaN(length)){
+        alert('please insert a number');
+        return;
+    }
 
     // calculate area
     const area = wight * length;
@@ -45,10 +57,13 @@ function calculateTrigleArea(){
 // reusable function ---> reduce duplicate code
 function calculateParallelogramArea(){
     const base = getInputValue('parallelogram-base');
-    // console.log(base);
-
     const height = getInputValue('parallelogram-height');
-    // console.log(height);
+    
+     // validate
+     if(isNaN(base) || isNaN(height)){
+        alert('please insert a number');
+        return;
+    }
 
     const area = base * height;
     setElementInnerText('parallelogram-area', area);
@@ -59,7 +74,8 @@ function calculateEllipseArea(){
     const majorRadius = getInputValue('ellipse-major-radius');
     const minorRadius = getInputValue('ellipse-minor-radius');
     const area = 3.14 * majorRadius * minorRadius;
-    setElementInnerText('ellipse-area', area)
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('ellipse-area', areaTwoDecimal);
 }
 
 // reusable get input value field in number 
@@ -75,3 +91,14 @@ function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+
+
+
+
+// Data validation
+/**
+ * 1. set the proper type of the input field. (number, data, email)
+ * 2. check type using typeof 
+ * 3. NaN means: not a Number. isNaN is checking wheckig whether the input is not a number or not
+ */

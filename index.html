@@ -17,7 +17,7 @@
          <div class="flex flex-col lg:flex-row">
             <!-- shape container -->
               <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- first card -->
+                <!-- triangle card -->
                 <div class="card w-90 bg-base-100 shadow-xl">
                     <figure><img src="image/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
@@ -30,7 +30,7 @@
                       <input type="text" class="ml-4 border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="h" name="" id="triangle-hight">
                       <span class="ml-2">cm</span>
                       </p>
-                      <p class="text-2xl">Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
+                      <p class="text-2xl">Area: <span id="triangle-area">0</span>cm<sup>2</sup></p>
                       <div class="card-actions">
                         <button onclick="calculateTrigleArea()" class=" btn btn-primary w-full">Calculat</button>
                       </div>
@@ -51,7 +51,7 @@
                     </p>
                     <p class="text-2xl">Area: <span id="rectangle-area">0</span> cm<sup>2</sup></p>
                     <div class="card-actions">
-                      <button onclick="calculateTrigleArea()" class=" btn btn-primary w-full">Calculat</button>
+                      <button onclick="calculateRectangleArea()" class=" btn btn-primary w-full">Calculat</button>
                     </div>
                   </div>
                 </div>
@@ -93,8 +93,46 @@
                     </div>
                   </div>
                 </div>
+                <!--  -->
+                <div class="card w-90 bg-base-100 shadow-xl">
+                  <figure><img src="image/ellipse.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p> Area (A) = πab</p>
+                    <p>
+              <input type="text" class="border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="large" name="" id="ellipse-major-radius">
+                    <span class="ml-2">cm</span>
+                    <!-- Ellipse  -->
+                    <input type="text" class="ml-4 border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="short" name="" id="ellipse-minor-radius">
+                    <span class="ml-2">cm</span>
+                    </p>
+                    <p class="text-2xl">Area: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+                    <div class="card-actions">
+                      <button onclick="calculateEllipseArea()" class=" btn btn-primary w-full">Calculat</button>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card w-90 bg-base-100 shadow-xl">
+                  <figure><img src="image/ellipse.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p> Area (A) = πab</p>
+                    <p>
+              <input type="text" class="border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="large" name="" id="ellipse-major-radius">
+                    <span class="ml-2">cm</span>
+                    <!-- Ellipse  -->
+                    <input type="text" class="ml-4 border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="short" name="" id="ellipse-minor-radius">
+                    <span class="ml-2">cm</span>
+                    </p>
+                    <p class="text-2xl">Area: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+                    <div class="card-actions">
+                      <button onclick="calculateEllipseArea()" class=" btn btn-primary w-full">Calculat</button>
+                    </div>
+                  </div>
+                </div>
 
-              </div>s
+              </div>
                <!-- area calculator -->
                  <div class="w-[400px]">
                      <div class="text-4xl">Area Calculator</div>

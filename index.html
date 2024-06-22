@@ -35,7 +35,7 @@
                         <button onclick="calculateTrigleArea()" class=" btn btn-primary w-full">Calculat</button>
                       </div>
                     </div>
-                  </div>
+                </div>
                 <!-- rectangle card--> 
                 <div class="card w-90 bg-base-100 shadow-xl">
                   <figure><img src="image/rectangle.png" alt="Shoes" /></figure>
@@ -55,20 +55,47 @@
                     </div>
                   </div>
                 </div>
-                <!-- therd card -->
+                <!-- parallelogram card -->
                 <div class="card w-90 bg-base-100 shadow-xl">
-                    <figure><img src="image/parallelogram.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Parallelogram</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                  <figure><img src="image/parallelogram.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">parallelogram</h2>
+                    <p> Area (A) = b x h</p>
+                    <p>
+              <input type="text" class="border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="w" name="" id="parallelogram-base">
+                    <span class="ml-2">cm</span>
+                    <!-- rectangle length -->
+                    <input type="text" class="ml-4 border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="l" name="" id="parallelogram-height">
+                    <span class="ml-2">cm</span>
+                    </p>
+                    <p class="text-2xl">Area: <span id="parallelogram-area">0</span> cm<sup>2</sup></p>
+                    <div class="card-actions">
+                      <button onclick="calculateParallelogramArea()" class=" btn btn-primary w-full">Calculat</button>
                     </div>
                   </div>
-              
-              </div>
-              <!-- area calculator -->
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-90 bg-base-100 shadow-xl">
+                  <figure><img src="image/ellipse.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p> Area (A) = πab</p>
+                    <p>
+              <input type="text" class="border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="large" name="" id="ellipse-major-radius">
+                    <span class="ml-2">cm</span>
+                    <!-- Ellipse  -->
+                    <input type="text" class="ml-4 border text-rose-600 bg-gray-400 text-xl w-14 px-2" placeholder="short" name="" id="ellipse-minor-radius">
+                    <span class="ml-2">cm</span>
+                    </p>
+                    <p class="text-2xl">Area: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+                    <div class="card-actions">
+                      <button onclick="calculateEllipseArea()" class=" btn btn-primary w-full">Calculat</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>s
+               <!-- area calculator -->
                  <div class="w-[400px]">
                      <div class="text-4xl">Area Calculator</div>
              </div>

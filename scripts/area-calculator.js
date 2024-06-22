@@ -1,4 +1,4 @@
-function calculateTrigleArea(){
+function calculatetriangleArea(){
     // get tringle base value
     const baseField = document.getElementById('triangle-base');
     const baseValueText = baseField.value;
@@ -23,6 +23,8 @@ function calculateTrigleArea(){
     // show tringle area
     const areaSpan = document.getElementById('triangle-area');
     areaSpan.innerText = area;
+
+    addToCalculationEntry('triangle', area);
 
 }
 
@@ -52,6 +54,8 @@ function calculateRectangleArea(){
     const rectangleAreaSpan = document.getElementById('rectangle-area');
     rectangleAreaSpan.innerText = area;
 
+    addToCalculationEntry('rectangle', area);
+
 }
 
 // reusable function ---> reduce duplicate code
@@ -67,6 +71,10 @@ function calculateParallelogramArea(){
 
     const area = base * height;
     setElementInnerText('parallelogram-area', area);
+
+    // add to calculation 
+ addToCalculationEntry('parallelogram', area)
+
 }
 
 // reusable get input value field in number
@@ -92,7 +100,28 @@ function setElementInnerText(elementId, area){
     element.innerText = area;
 }
 
+// add to calculation entry
+/**
+ * 1. get the element where you want to add the dynamic HTML
+ * 2. create  an element you want to add
+ * 3. if needed add some class
+ * 4. set inner HTML. it could be dynamic Template string 
+ * 5. append the created element as a child of the parent
+ */
+function addToCalculationEntry(areatype, area){
+    console.log(areatype + ' ' + area)
+    const addToCalculationEntry = document.getElementById
+    ('calculation-entry');
 
+    const count = addToCalculationEntry.childElementCount;
+
+    const p = document.createElement('p');
+    p.classList.add('my-4');
+    p.innerHTML = `${count + 1} ${areatype} ${area} cm<sup>2</sup> <button class="btn btn-sm btn-success">Convert</button>`;
+
+    addToCalculationEntry.appendChild(p);
+
+}
 
 
 
